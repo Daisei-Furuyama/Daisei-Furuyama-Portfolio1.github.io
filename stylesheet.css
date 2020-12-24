@@ -1,0 +1,176 @@
+*{
+  box-sizing: border-box;
+  width:1170px;
+  margin:0 auto;
+  font-family: serif;
+
+}
+header {
+  height: 65px;
+  width: 1170px;
+  background-color: rgba(23, 38, 41, 0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+  margin: 0 auto;
+  padding: 10px 20px ;
+}
+.header-left{
+  float: left;
+  color:white;
+}
+.header-right a{
+  float:right;
+  color:white;
+  display:block;
+
+}
+.top-wrapper{
+  background-image: url(https://images.unsplash.com/photo-1571430787810-7df87b7481f3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  background-size: cover;
+  text-align: center;
+  height: 650px;
+  margin:0 auto;
+  padding:250px 0 100px 0;
+
+
+}
+.top-wrapper h1{
+  
+  letter-spacing: 5px;
+  color:white;
+  font-family: serif;
+  font-size: 75px;
+  padding-bottom:10px;
+}
+.top-wrapper p{
+  color:white;
+  font-family: serif;
+}
+.about-me{
+  height:700px;
+  margin:0 auto;
+  width:1170px;
+  padding:150px 0;
+  margin-bottom:100px;
+}
+h2{
+  text-align:center;
+  font-size:50px;
+  font-family: serif;
+}
+.content{
+  padding:100px 40px;
+  display:flex;
+}
+.img img{
+  height:350px;
+  margin:0 100px;
+  width:350px;
+  border-radius: 100px;
+  float:left;
+  width:5;
+
+}
+.sentence{
+  float:right;
+  display:block;
+  font-family: serif;
+  padding-left:50px;
+}
+.name{
+  font-size: 25px;
+  padding-bottom:5px;
+}
+.birthday{
+  
+}
+.place{
+  padding-bottom:10px;
+}
+.history{
+  width:250px;
+  float:left;
+}
+.skill-list{
+  padding-top: 100px;
+  width:1170px;
+  height:770px;
+  background-color: rgb(241, 253, 253);
+}
+.skill{
+  display:inline-block;
+  float:left;
+  width:20%;
+  padding:20px 0 20px 50px;
+}
+.skill span{
+  zoom:500%;
+}
+.skill img{
+  zoom:10%;
+}
+.html span{
+  color:orangered;
+}
+.css span{
+  color:blue;
+}
+.javascript span{
+  color:rgb(238, 238, 63);
+}
+h3{
+  text-align:center;
+  font-size: 50px;
+}
+
+.skill p{
+  font-size:25px;
+}
+.list{
+  text-align:center;
+  margin:200px 0;
+  font-size:30px;
+  line-height:80px;
+}
+.contact{
+  padding:100px 0;
+
+}
+h4{
+  font-size:50px;
+  text-align:center;
+  padding-bottom: 50px;
+
+}
+.form {
+  text-align:center;
+  
+}
+.form p{
+  line-height:50px;
+
+}
+.e-mail{
+  font-size:30px;
+  color:rgb(100, 219, 248);
+
+}
+.form a{
+  color:rgb(140, 0, 255);
+}
+.instagram{
+  font-size:30px;
+  color:rgba(76, 47, 145, 0.521);
+
+}
+.copy-right{
+  color:white;
+  background-color: rgba(23, 38, 41, 0.9);
+  background-color: cover;
+  text-align: center;
+  height: 75px;
+  padding:0;
+  margin:0;
+  line-height:75px;
+}
