@@ -1,28 +1,30 @@
 *{
   box-sizing: border-box;
-  width:1170px;
+  width:100%;
   margin:0 auto;
   font-family: serif;
 
 }
 header {
   height: 65px;
-  width: 1170px;
   background-color: rgba(23, 38, 41, 0.9);
   position :fixed;
   top: 0;
   z-index: 10;
-  margin: 0 auto;
-  padding: 10px 20px ;
+  padding: 20px 60px;
+  
+}
+.header-container{
+  display:flex;
+
 }
 .header-left{
-  float: left;
   color:white;
 }
 .header-right a{
-  float:right;
   color:white;
-  display:block;
+  display:flex;
+  justify-content: flex-end;
 
 }
 .top-wrapper{
@@ -94,9 +96,9 @@ h2{
 }
 .skill-list{
   padding-top: 100px;
-  width:1170px;
-  height:770px;
+  height:830px;
   background-color: rgb(241, 253, 253);
+  text-align:center;
 }
 .skill{
   display:inline-block;
@@ -106,9 +108,11 @@ h2{
 }
 .skill span{
   zoom:500%;
+  padding-top:5px;
 }
 .skill img{
-  zoom:10%;
+  position:relative;
+  transform: scale(0.5);
 }
 .html span{
   color:orangered;
