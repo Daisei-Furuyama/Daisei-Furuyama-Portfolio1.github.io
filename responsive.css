@@ -1,0 +1,84 @@
+@media screen and (max-width: 670px){
+    .top-wrapper {
+        background-position:center right -250px;
+    }
+    .top-wrapper h1{
+        font-size:30px;
+    }
+    .top-wrapper p{
+        font-size:13px;
+    }
+   .content{
+       flex-direction: column;
+       padding:0;
+   }
+   .about-me{
+       height:1000px;
+       
+   }
+   .img img{
+       margin-left:0;
+       width:200px;
+       height:200px;
+       margin:30px 0;
+       
+   }
+   .sentence{
+    padding-left:0px;
+    margin:0 auto;
+    width:80%;
+   }
+   .name{
+       text-align:center;
+   }
+   .profession{
+       text-align:center;
+
+   }
+   .icon-container{
+       display:flex;
+       margin:15px 0;
+   }
+   .ryakureki{
+       text-align:center;
+   }
+   .history{
+       width:100%;
+       text-align:center;
+   }
+
+
+    .skill-list {
+        flex-wrap: wrap;
+    }
+
+    .skill-list li {
+        width: calc(100% / 1);
+        margin:15px 0;
+        font-weight:600;
+    }
+
+
+   .skill-container{
+       flex-wrap: wrap;
+       width:50%;
+   }
+   .contact{
+       font-size:13px;
+   }
+   .form a{
+       font-size:18px;
+   }
+   .e-mail{
+       font-size:20px;
+   }
+   .instagram{
+       font-size:20px;
+   }
+   .copy-right{
+       font-size:12px;
+   }
+
+
+   
+}
