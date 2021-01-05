@@ -3,30 +3,252 @@
   width:100%;
   margin:0 auto;
   font-family: serif;
-
 }
-header {
-  height: 65px;
-  background-color: rgba(23, 38, 41, 0.9);
-  position :fixed;
+
+
+/* コピペ */
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 8%;
+  width: 0;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: fixed;
+  width: auto;
+  height: 52px;
+  left: 10%;
+  top: 8%;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  line-height: 1.5;
+}
+
+.logo-top {
+  font-size: 14px;
+  display: block;
+}
+
+/* nav */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  position: fixed;
+  width: 4em;
+  height: 4em;
+  right: 10%;
+  top: 8%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  color: black;
+  z-index: 50;
+  border-radius: 3px;
+}
+
+.nav-btn:hover { /* ボタンを囲うbox ホバー時に形や色を変化 */
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  transform: scale(1.1);
+}
+
+.nav-btn div:nth-of-type(2){ /* 文字 */
+  transition: all 0.2s;
+}
+
+.nav-btn div:nth-of-type(1),
+.nav-btn div:nth-of-type(3) { /* 線 */
+  width: 4em;
+  height: 2px;
+  background-color: black;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.nav-btn.nav-btn-active div:nth-of-type(1) { /* クリックされたときの線 */
+  transform: translateY(17px) rotate(-405deg);
+}
+.nav-btn.nav-btn-active div:nth-of-type(3) { /* クリックされたときの線 */
+  transform: translateY(-17px) rotate(405deg);
+}
+
+.nav-btn.nav-btn-active:hover div:nth-of-type(1) { /* クリック&hoverされたときの線 */
+  background-color: #fff;
+}
+
+.nav-btn.nav-btn-active:hover div:nth-of-type(3) { /* クリック&hoverされたときの線 */
+  background-color: #fff;
+}
+
+.nav-btn.nav-btn-active div:nth-of-type(2) { /* クリックされたときに文字を削除 */
+  opacity: 0;
+}
+
+.nav-box {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   top: 0;
-  z-index: 10;
-  padding: 20px 60px;
-  
+  left: 0;
+  background-color: #fff;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  transform: translate(0, 100vh);
 }
-.header-container{
-  display:flex;
 
+.nav-box.nav-box-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0);
 }
-.header-left{
-  color:white;
-}
-.header-right a{
-  color:white;
-  display:flex;
-  justify-content: flex-end;
 
+.nav-close {
+  width: 100vw;
+  height: 100vh;
+  background-color:white;
+  position: fixed;
+  z-index: -1;
 }
+
+
+.nav-contents {
+  padding: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 360px;
+  transition: all 0.2s;
+}
+
+.nav-h4 {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.nav-h4::before { /* メニューのh4の丸 */
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 0;
+  width: 125px;
+  height: 125px;
+  background-color: #3daaf3;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.nav-ul {
+  list-style: none;
+}
+
+.nav-li {
+  margin: 20px 0;
+  width: auto;
+  text-align: center;
+}
+
+
+.nav-a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-a:hover .nav-a-en,
+.nav-a:hover .nav-a-ja {
+  transform: scale(1.2);
+}
+
+.nav-a::before { /* 真ん中の線 */
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #E2E2E2;
+  position: absolute;
+  top: 50%;
+  transition: all 0.4s;
+  transform: translateY(-50%);
+}
+
+.nav-a:hover::before { /* hover時の線 */
+  background-color: black;
+  width: 80%;
+  transform: scale(1.2) translateX(10%);
+}
+
+.nav-a::after { /* hover時の左の三角 */
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: lightgray;
+  clip-path: polygon(75% 50%, 0 0, 0 100%);
+  position: absolute;
+  left: -8%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-a:hover::after {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(63, 63, 63);
+  transform: translate(0, -50%);
+}
+
+
+.nav-a-en,
+.nav-a-ja {
+  display: block;
+  padding: 0 10px;
+  background-color: #fff;
+  z-index: 5;
+  transition: all 0.3s;
+}
+
+.nav-a-en {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.nav-a-ja {
+  font-size: 12px;
+  color: rgba(68, 68, 68, 0.9);
+}
+/* コピペ終わり */
+
+
 .top-wrapper{
   background-image: url(https://images.unsplash.com/photo-1571430787810-7df87b7481f3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
   background-size: cover;
@@ -49,10 +271,11 @@ header {
   color:white;
   font-family: serif;
 }
+
+
 .about-me{
   height:700px;
   margin:0 auto;
-  width:1170px;
   padding:150px 0;
   margin-bottom:100px;
 }
@@ -64,79 +287,108 @@ h2{
 .content{
   padding:100px 40px;
   display:flex;
+  margin:0 auto;
+}
+.img{
+  width:50%;
 }
 .img img{
   height:350px;
   margin:0 100px;
   width:350px;
-  border-radius: 100px;
-  float:left;
-  width:5;
+  border-radius: 50%;
+  display:flex;
+  margin-left:250px;
 
 }
 .sentence{
-  float:right;
   display:block;
   font-family: serif;
-  padding-left:50px;
+  width:50%;
+  margin-left:50px;
+  line-height:2;
 }
+.icon span{
+  display:inline !important;
+  margin-right:8px;
+  border:2px solid gray;
+  padding:5px;
+}
+
 .name{
   font-size: 25px;
   padding-bottom:5px;
-}
-.birthday{
-  
 }
 .place{
   padding-bottom:10px;
 }
 .history{
-  width:250px;
+  width:60%;
   float:left;
-}
-.skill-list{
-  padding-top: 100px;
-  height:830px;
-  background-color: rgb(241, 253, 253);
-  text-align:center;
-}
-.skill{
-  display:inline-block;
-  float:left;
-  width:20%;
-  padding:20px 0 20px 50px;
-}
-.skill span{
-  zoom:500%;
-  padding-top:5px;
-}
-.skill img{
-  position:relative;
-  transform: scale(0.5);
-}
-.html span{
-  color:orangered;
-}
-.css span{
-  color:blue;
-}
-.javascript span{
-  color:rgb(238, 238, 63);
-}
-h3{
-  text-align:center;
-  font-size: 50px;
+  text-align:left;
 }
 
-.skill p{
-  font-size:25px;
+
+h3{
+  font-size:50px;
+}
+.skill-box {
+  text-align: center;
+}
+
+.skill-box{
+  background-color:  rgb(241, 253, 253);
+  padding:100px 0;
+
+}
+h3{
+  padding-bottom:50px;
+}
+.skill-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.skill-list li p,
+.skill-list li i,
+.skill-list li img {
+  display: block;
+  font-size: 30px;
+}
+
+.skill-list li i{
+  font-size: 60px;
+}
+
+.skill-list li:nth-child(1) i{
+  color:orangered;
+}
+.skill-list li:nth-child(2) i{
+  color:blue;
+}
+.skill-list li:nth-child(3) i{
+  color:rgb(255, 217, 0);
+}
+.skill-list li img {
+  object-fit: cover;
+  width: 100px;
+  height: auto;
 }
 .list{
-  text-align:center;
-  margin:200px 0;
-  font-size:30px;
-  line-height:80px;
+  line-height:70px;
+  font-size:20px;
+  padding:50px 0;
 }
+.list i{
+  display:inline;
+  color:rgb(17, 5, 128);
+}
+
+
 .contact{
   padding:100px 0;
 
@@ -168,6 +420,15 @@ h4{
   color:rgba(76, 47, 145, 0.521);
 
 }
+.e-mail i{
+  display:inline;
+}
+.instagram i{
+  display:inline;
+}
+.contact-wrapper{
+  padding:50px 0;
+}
 .copy-right{
   color:white;
   background-color: rgba(23, 38, 41, 0.9);
@@ -177,4 +438,8 @@ h4{
   padding:0;
   margin:0;
   line-height:75px;
+}
+
+.sp-menu {
+  display: none;
 }
