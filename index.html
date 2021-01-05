@@ -1,130 +1,208 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daisei Furuyama Portfolio</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <script src="https://kit.fontawesome.com/684548cccd.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="responsive.css">
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <div class="header-left">
-        <p>Daisei Furuyama</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daisei Furuyama Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/684548cccd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+  <header class="header" id="js-header">
+    <p class="logo-box">
+      <a href="#" class="logo" id="js-logo">
+        <span class="logo-top">
+          Web Create
+        </span>
+         Daisei Furuyama
+      </a>
+    </p>
+    <!-- ナビ -->
+    <nav class="nav">
+      <div class="nav-btn" id="js-navBtn">
+        <div></div>
+        <div>MENU</div>
+        <div></div>
       </div>
-      <div class="header-right">
-        <a href="">menu</a>
+      <div class="nav-box" id="js-navBox">
+        <div class="nav-close" id="js-navClose"></div>
+        <div class="nav-contents" id="js-navCon">
+          <h4 class="nav-h4">MENU</h4>
+          <ul class="nav-ul" id="js-navUl">
+            <li class="nav-li">
+              <a href="#" class="nav-a">
+                <span class="nav-a-en">TOP</span>
+                <span class="nav-a-ja">トップ</span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#sec02-about" class="nav-a">
+                <span class="nav-a-en">ABOUT</span>
+                <span class="nav-a-ja">自己紹介</span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#sec03-service" class="nav-a">
+                <span class="nav-a-en">SKILL</span>
+                <span class="nav-a-ja">スキル内容</span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#sec05-contact" class="nav-a">
+                <span class="nav-a-en">E-mail</span>
+                <span class="nav-a-ja">メール</span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#sec06-contact" class="nav-a">
+                <span class="nav-a-en">Instagram</span>
+                <span class="nav-a-ja">インスタグラム</span>
+              </a>
+            </li>
+           
+          </ul>
+        </div>
       </div>
-    </div>
-
+    </nav>
   </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>¡Buenos Días!</h1>
-      <p>Vamos a presentar una persona creativo.</p>
-      <p>Se llama Daisei Furuyama. Está en La Universidad Sofía.</p>
-      <p>Sabe hablar español, inglés y japonés. Además es programador.</p>
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>¡Buenos Días!</h1>
+        <p>Vamos a presentar una persona creativa.</p>
+        <p>Se llama Daisei Furuyama. Está en La Universidad Sofía.</p>
+        <p>Sabe hablar español, inglés y japonés. Además es programador.</p>
+      </div>
     </div>
-  </div>
-  <div class="about-me">
-    <div class="container">
-      <h2>This is Me</h2>
-      <div class="content">
-        <div class="img">
-          <img src="https://raw.githubusercontent.com/Daisei-Furuyama/Daisei-Furuyama-Portfolio1.github.io/main/S__47956006.jpg" alt="">
-        </div>
-        <div class="sentence">
-          <p class="name">Daisei Furuyama</p>
-          <p>Fronted Developer.</p>
-          <p class="birthday">
-            <span class="fas fa-birthday-cake"></span>2002/01/04</p>
-          <p class="place">
-            <span class="fas fa-globe-asia"></span>
-            Chiba,Japan
-          </p>
-          <p><略歴></p>
-          <p class="history">千葉県立検見川高等学校を2020年3月に卒業。4月に上智大学外国語学部イスパニア語学科に進学。スペイン語と英語の学習に励み、TOEIC815点、CASEC731点の実力。学業の傍らプログラミング学習を続けている。</p>
-        </div>
-      </div> 
-    </div>
-  </div>
-  <div class="skill-list">
-    <div class="container">
-      <h3>Skill List</h3>
-        <div class="skill html">
-          <p>HTML</p>
-          <span class="fab fa-html5"></span>
-        </div>
-        <div class="skill css">
-          <p>CSS</p>
-          <span class="fab fa-css3-alt"></span>
-        </div>
-        <div class="skill javascript">
-          <p>JavaScript</p>
-          <span class="fab fa-js"></span>
-
-        </div>
-        <div class="skill english">
-          <p>English</p>
-          <img src="https://www.civillink.net/sozai/images_small/pics2676.gif" alt="">
-        
-
-        </div>
-        <div class="skill spanish">
-          <p>Español</p>
-          <img src="https://www.civillink.net/sozai/images_small/pics2615.gif" alt="">
-      
-        </div>
-        <div class="list">
-          <div class="a">
-            <p>● HTML/CSSを用いたwebサイト構築</p>
+    <div id="sec02-about" class="about-me">
+      <div class="container">
+        <h2>This is Me</h2>
+        <div class="content">
+          <div class="img">
+            <img
+              src="https://raw.githubusercontent.com/Daisei-Furuyama/Daisei-Furuyama-Portfolio1.github.io/main/S__47956006.jpg"
+              alt=""
+            />
           </div>
-          <div class="b">
-            <p>● JavaScriptを利用したアニメーション</p>
+          <div class="sentence">
+            <p class="name">Daisei Furuyama</p>
+            <p class="profession">- Front-end Developer -<br />- Spanish and English speaker -</p>
+            <div class="icon-container">
+              <p class="birthday icon">
+                <span class="fas fa-birthday-cake"></span>2002/01/04
+              </p>
+              <p class="place icon">
+                <span class="fas fa-globe-asia"></span>
+                Chiba, Japan
+              </p>
+            </div>
+            <p class="ryakureki">&lt;略歴&gt;</p>
+            <p class="history">
+              千葉県立検見川高等学校を2020年3月に卒業。4月に上智大学外国語学部イスパニア語学科に進学。スペイン語と英語の学習に励み、TOEIC815点、CASEC731点の実力。学業の傍らプログラミング学習を続けている。
+            </p>
           </div>
-          <div class="c">
-            <p>● 英語能力を利用した翻訳等</p>
-          </div>
-          <div class="d">
-            <p>● スペイン語を利用した翻訳等（現在利用できません）</p>
-          </div>
-        </div>
-    </div>
-  </div>
-  <div class="contact">
-    <div class="container">
-      <h4>Contact</h4>
-      <div class="form">
-        <div class="message">
-          <p>下記のいずれかにご連絡お願いします。</p>
-          <p>※空メール・迷惑メール等の送信はご遠慮ください。</p>
-          
-        </div>
-        <div class="e-mail">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:dai14.f@icloud.com">E-mail Adress:dai14.f@icloud.com</a>
-        </div>
-        <div class="instagram">
-          <i class="fab fa-instagram"></i>
-          <a href="https://www.instagram.com/dai14.f">Instagram Account:dai14.f</a>
-        </div>
-        <div class="message2">
-          <p>基本的に翌日までにご返信いたします。</p>
-          <p>相談のみでも構いません。ご気軽にご連絡ください。</p>
-
         </div>
       </div>
-
     </div>
-  </div>
-  <div class="copy-right">
-    <div class="container">
-      <p>Copyright© Daisei Furuyama All Right Reserved.</p>
-    </div>
-  </div>
 
-  
-</body>
+    <!-- スキル -->
+    <div id="sec03-service" class="skill-box">
+      <h3>Skill List</h3>
+      <ul class="skill-list">
+        <li>
+          <p>HTML</p>
+          <i class="fab fa-html5"></i>
+        </li>
+        <li>
+          <p>CSS</p>
+          <i class="fab fa-css3-alt"></i>
+        </li>
+        <li>
+          <p>Javascript</p>
+          <i class="fab fa-js"></i>
+        </li>
+        <li>
+          <p>English</p>
+          <img
+            src="https://www.civillink.net/sozai/images_small/pics2676.gif"
+            alt=""
+          />
+        </li>
+        <li>
+          <p>Español</p>
+          <img
+            src="https://www.civillink.net/sozai/images_small/pics2615.gif"
+            alt=""
+          />
+        </li>
+      </ul>
+      <div class="list">
+        <div class="a">
+          <p>
+            <i class="fas fa-check"></i>
+             HTML/CSSを用いたwebサイト構築
+          </p>
+        </div>
+        <div class="b">
+          <p>
+            <i class="fas fa-check"></i>
+             JavaScriptを利用したアニメーション
+          </p>
+        </div>
+        <div class="c">
+          <p>
+            <i class="fas fa-check"></i>
+             英語能力を利用した翻訳
+          </p>
+        </div>
+        <div class="d">
+          <p>
+            <i class="fas fa-check"></i>
+             スペイン語能力を利用した翻訳
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="container">
+        <h4>Contact</h4>
+        <div class="form">
+          <div class="message">
+            <p>下記のいずれかにご連絡お願いします。</p>
+            <p>※空メール・迷惑メール等の送信はご遠慮ください。</p>
+          </div>
+          <div class="contact-wrapper">
+            <div id="sec05-contact" class="e-mail">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:dai14.f@icloud.com"
+                >E-mail Adress: dai14.f@icloud.com</a
+              >
+            </div>
+            <div id="sec06-contact" class="instagram">
+              <i class="fab fa-instagram"></i>
+              <a href="https://www.instagram.com/dai14.f">
+                Instagram Account: dai14.f
+              </a>
+            </div>
+          </div>
+          <div class="message2">
+            <p>基本的に翌日までにご返信いたします。</p>
+            <p>相談のみでも構いません。お気軽にご連絡ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <div class="container">
+        <p>Copyright&copy; Daisei Furuyama All Right Reserved.</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
 </html>
