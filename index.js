@@ -43,15 +43,7 @@
     
   
   
-    // ロゴをクリックしたときの処理
-    $logo.addEventListener("click", function(e) {
-      e.preventDefault();
-      scroll({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-  
+
   
   
   
